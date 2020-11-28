@@ -10,7 +10,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "file:///D:/websitekhundech/index.html",
+            "url": "",
             "webRoot": "${workspaceFolder}"
         }
     ]
