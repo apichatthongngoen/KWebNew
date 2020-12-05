@@ -12,6 +12,18 @@ const app = express()
 app.set('views', path.join(__dirname, 'html'))
 app.set('view engine', 'ejs')
 // Select Data
+app.get('/orders_item', (req, res) => {
+let sql = 'SELECT * FROM orders_item'
+let query = db.query(sql, (err, results) => {
+if (err) throw err
+console.log(results)
+res.json(results)
+})
+})
+app.get('/item', (req, res) => {
+res.render('index')
+})
+// Select Data
 app.get('/products2', (req, res) => {
 let sql = 'SELECT * FROM products2'
 let query = db.query(sql, (err, results) => {
@@ -20,9 +32,9 @@ console.log(results)
 res.json(results)
 })
 })
-app.get('/', (req, res) => {
+app.get('/product', (req, res) => {
 res.render('product')
 })
 app.listen('80', () => {
-console.log('start')
+console.log('Server is running...')
 })
