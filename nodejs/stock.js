@@ -20,7 +20,7 @@ console.log(results)
 res.json(results)
 })
 })
-app.get('/item', (req, res) => {
+app.get('/', (req, res) => {
 res.render('index')
 })
 // Select Data
